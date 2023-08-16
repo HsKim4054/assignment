@@ -1,6 +1,6 @@
 package Chapter5;
 
-public class Ex5_2 {
+public class Ex5_02 {
 	public static void main(String[] args) {
 		/*
 		 * 다음과 같은 배열이 있을 때, arr[3].length의 값은 얼마인가?

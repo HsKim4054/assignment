@@ -1,6 +1,6 @@
 package Chapter5;
 
-public class Ex5_9 {
+public class Ex5_09 {
 
 	public static void main(String[] args) {
 		char[][] star = {

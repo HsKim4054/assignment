@@ -1,6 +1,6 @@
 package Chapter5;
 
-public class Ex5_4 {
+public class Ex5_04 {
 
 	public static void main(String[] args) {
 		int[][] arr = {

@@ -1,6 +1,6 @@
 package Chapter5;
 
-public class Ex5_5 {
+public class Ex5_05 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

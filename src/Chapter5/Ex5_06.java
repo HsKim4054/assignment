@@ -1,6 +1,6 @@
 package Chapter5;
 
-public class Ex5_6 {
+public class Ex5_06 {
 
 	public static void main(String[] args) {
 		int[] coinUnit = {500, 100, 50, 10};

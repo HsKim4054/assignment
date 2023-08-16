@@ -1,6 +1,6 @@
 package Chapter5;
 
-public class Ex5_7 {
+public class Ex5_07 {
 
 	public static void main(String[] args) {
 		if(args.length!=1) {
