@@ -26,9 +26,6 @@ public class Ex5_11 {
 				System.out.printf("%4d",result[i][j]);
 			}
 			System.out.println();
-			
-			System.out.println();
-			System.out.println();
 		}
 
 	}
