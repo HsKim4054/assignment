@@ -13,17 +13,17 @@ public class Ex5_07 {
 			int[] coinUnit = {500, 100, 50, 10 }; // 동전의 단위
 			int[] coin = {5, 5, 5, 5}; // 단위별 동전의 개수
 			for(int i=0;i<coinUnit.length;i++) {
-			int coinNum = 0;
-			coinNum += money/coinUnit[i];
+				int coinNum = 0;
+				coinNum += money/coinUnit[i];
 			
-			if(coin[i]>= coinNum) {
-				coin[i] -= coinNum;
-			}
-			else {
-				coinNum = coin[i];
-				coin[i] = 0;
-			}
-			money = money - coinNum*coinUnit[i];
+				if(coin[i]>= coinNum) {
+					coin[i] -= coinNum;
+				}
+				else {
+					coinNum = coin[i];
+					coin[i] = 0;
+				}
+				money = money - coinNum*coinUnit[i];
 			
 			//cmd 창에서 실행하는 방법 설명 해주는 블로그 https://bada744.tistory.com/14
 			
@@ -33,7 +33,7 @@ public class Ex5_07 {
 			 (만일 충분한 동전이 없다면 배열 coin에 있는 만큼만 뺀다.)
 			 3. 금액에서 동전의 개수(coinNum)와 동전단위를 곱한 값을 뺀다.
 			 */
-			System.out.println(coinUnit[i]+"원: "+coinNum);
+				System.out.println(coinUnit[i]+"원: "+coinNum);
 			}
 			if(money > 0) {
 			System.out.println("거스름돈이 부족합니다.");
