@@ -30,7 +30,7 @@ public class Ex9_10 {
 			}
 			else if (aligment == 2) {
 				int a =1;
-				for(int i=length-1;i>str.length();i--) {
+				for(int i=length-1;i>=length-str.length();i--) {
 					carr[i] = str.charAt(str.length()-a++);
 				}
 			}
