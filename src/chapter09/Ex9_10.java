@@ -9,36 +9,55 @@ public class Ex9_10 {
 	 (System.arraycopy()사용)
 	4. 2에서 생성한 char배열을 문자열로 만들어서 반환한다.
 	*/
-	static String format(String str, int length, int aligment) {
-		String res = "";
-		if(length <str.length()) res = str.substring(0, length);
-		else {
-			char[] carr = new char[length];
-			for(int i=0; i<length; i++) {
-				carr[i] = ' ';
-			}
-			if(aligment == 0) {
-				for(int i=0; i<str.length(); i++) {
-					carr[i] = str.charAt(i);
-				}
-			} 
-			else if (aligment == 1) {
-				int m = (length-str.length())/2;
-				for(int i=m; i<str.length()+m; i++) {
-					carr[i] = str.charAt(i-m);
-				}
-			}
-			else if (aligment == 2) {
-				int a =1;
-				for(int i=length-1;i>=length-str.length();i--) {
-					carr[i] = str.charAt(str.length()-a++);
-				}
-			}
-			for(int i=0;i<carr.length;i++) {
-				res +=carr[i];
-			}
+	static String format(String str, int length, int alignment) {
+//		String res = "";
+//		if(length <str.length()) res = str.substring(0, length);
+//		else {
+//			char[] carr = new char[length];
+//			for(int i=0; i<length; i++) {
+//				carr[i] = ' ';
+//			}
+//			if(alignment == 0) {
+//				for(int i=0; i<str.length(); i++) {
+//					carr[i] = str.charAt(i);
+//				}
+//			} 
+//			else if (alignment == 1) {
+//				int m = (length-str.length())/2;
+//				for(int i=m; i<str.length()+m; i++) {
+//					carr[i] = str.charAt(i-m);
+//				}
+//			}
+//			else if (alignment == 2) {
+//				int a =1;
+//				for(int i=length-1;i>=length-str.length();i--) {
+//					carr[i] = str.charAt(str.length()-a++);
+//				}
+//			}
+//			for(int i=0;i<carr.length;i++) {
+//				res +=carr[i];
+//			}
+//		}
+//		return res;
+		
+		if(length<str.length()) {
+			return str.substring(0,length);
 		}
-		return res;
+		
+		char[] carr = new char[length];
+		for(int i=0; i<carr.length; i++) {
+			carr[i] = ' ';
+		}
+		int space = 0;
+		if(alignment==0) {}
+		else if(alignment==1) {
+			space = (length-str.length())/2;
+		}
+		else if(alignment==2) {
+			space = length-str.length();
+		}
+		System.arraycopy(str.toCharArray(), 0, carr, space, str.length());
+		return new String(carr);
 	}
 	
 	public static void main(String[] args) {
