@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Ex11_01 {
 	public static void main(String[] args) {
-		ArrayList list1 = new ArrayList();
-		ArrayList list2 = new ArrayList();
-		ArrayList kyo = new ArrayList(); // 교집합
-		ArrayList cha = new ArrayList(); // 차집합
-		ArrayList hap = new ArrayList(); // 합집합
+		ArrayList<Integer> list1 = new ArrayList<>();
+		ArrayList<Integer> list2 = new ArrayList<>();
+		ArrayList<Integer> kyo = new ArrayList<>(); // 교집합
+		ArrayList<Integer> cha = new ArrayList<>(); // 차집합
+		ArrayList<Integer> hap = new ArrayList<>(); // 합집합
 		list1.add(1);
 		list1.add(2);
 		list1.add(3);
@@ -17,15 +17,14 @@ public class Ex11_01 {
 		list2.add(4);
 		list2.add(5);
 		list2.add(6);
-		/*
-		 * (1) 알맞은 코드를 넣어 완성하시오.
-		 */
+		
 		kyo.addAll(list1);
 		kyo.retainAll(list2);
 		cha.addAll(list1);
 		cha.removeAll(kyo);
 		hap.addAll(cha);
 		hap.addAll(list2);
+		
 		System.out.println("list1=" + list1);
 		System.out.println("list2=" + list2);
 		System.out.println("kyo=" + kyo);
